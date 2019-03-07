@@ -1,4 +1,4 @@
-# ReactJS SPA application for Amazon Cloud Service (aws-sdk)
+# ReactJS SPA for Amazon Cloud Service (aws-sdk)
 
 Used packages and frameworks:
 1. [AWS-SDK](https://github.com/aws/aws-sdk-js)
