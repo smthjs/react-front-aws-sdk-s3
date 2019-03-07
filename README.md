@@ -14,6 +14,20 @@ Used packages and frameworks:
 <img src="https://github.com/smthjs/react-front-aws-sdk-s3/blob/master/Design.png" />
 <br/>
 
+# You must configure the aws client
+Go to the file 'backend/app/config/s3.config'
+```
+   module.exports = {
+      s3Client: new AWS.S3({
+         accessKeyId: 'some key',
+         secretAccessKey: 'some secret key',
+         region : 'some region', //'ru-msk',
+         endpoint: 'some endpoint', //'hb.bizmrg.com',
+      }),
+      bucket: 'some bucket',
+   };
+```
+
 # To run the application
 1. clone [repository](https://github.com/smthjs/react-front-aws-sdk-s3.git)
 2. open this project in your favorite IDE
