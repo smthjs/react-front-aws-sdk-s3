@@ -26,13 +26,15 @@ Used packages and frameworks:
 # The idea of a global state
 As a global state management I use React.createContext();
 
-```const GlobalStoreContext = React.createContext({});
+```
+   const GlobalStoreContext = React.createContext({});
 ```
 
 created component GlobalState which contains all global variables described in state={...} and the changeState method
 
 
-```<GlobalStoreContext.Provider
+```
+   <GlobalStoreContext.Provider
         value={{
           ...state,
           changeState,
@@ -44,7 +46,8 @@ created component GlobalState which contains all global variables described in s
 
 or when the child component with the component of the highest order written method
 
-```const withGlobalStore = (Component, mapStateToProps, mapActionToProps) => (props) => (
+```
+   const withGlobalStore = (Component, mapStateToProps, mapActionToProps) => (props) => (
     <GlobalStoreContext.Consumer>
         {store => {
         const mappedState =
@@ -68,7 +71,8 @@ or when the child component with the component of the highest order written meth
 for Example
 
 
-```const mapStateToProps = state => ({
+```
+   const mapStateToProps = state => ({
         anyField: state.anyField,
         ...
     });
